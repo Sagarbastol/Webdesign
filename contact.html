@@ -1,0 +1,104 @@
+<html class="contact">
+<head>
+<title>Contact</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	
+	<style>
+			footer{
+				float:left;
+				margin-left:-10px;
+				margin-bottom:0px;
+				margin-top:0%;
+				height:25%;
+				background-color:#0009;
+				width:100%;
+				border:1px solid white;
+				color:white;
+				position:bottom;
+			}
+			th{
+				padding:10px 30px 10px 30px;
+			}
+			td{
+				padding:10px 0px 10px 30px;
+			}
+			label{
+				color:blue;
+			}
+		</style>
+	
+</head>
+	
+		<header>
+			<div class="main">
+				<nav>
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="contact.html">Contact</a></li>	
+					</ul>
+				</nav>
+			</div>
+		</header>
+<script src="JS/script.js"></script>
+<div id="form">
+	<form name="myForm" onsubmit="return validateForm()">
+		<h1 style="font-size:100px;font-weight:bold;font-style:italic;font-family:georgia,garamond,serif;margin-top:-80px;text-align:center;">Contact me</h1><br><br><br>
+		<label>Name:</label>
+		<input type="text" name="firstname" value="" placeholder="Enter Your Name"><br><br>
+		<label>Email:</label>
+		<input type="email" name="email" value="" placeholder="abcdef12@gmail.com"><br><br>
+		<label>Mobile Number:</label>
+		<input type="number" name="mob" placeholder="Mobile Number"><br><br>
+		<label>Gender:</label>
+		<input type="radio" name="gender" value="male" checked>Male
+		<input type="radio" name="gender" value="female">Female<br><br>
+		<label>Message:</label>
+		<input type="message" name="message" value="" placeholder="Any Suggestion or Questions"><br><br>
+		<button type="submit" class="submitBtn">Submit</button>
+		<button type="reset" class="resetBtn">Clear</button>
+	</form>
+</div>
+<script>
+	function validateForm() {
+		// You can add more complex validation logic here if needed.
+		// For this example, we'll just check if the Name, Email, and Message fields are filled.
+		var name = document.forms["myForm"]["firstname"].value;
+		var email = document.forms["myForm"]["email"].value;
+		var message = document.forms["myForm"]["message"].value;
+
+		if (name == "" || email == "" || message == "") {
+			alert("Please fill out all required fields!");
+			return false; // Prevent form submission
+		}
+
+		// If all fields are filled, show a success message
+		alert("Your message is submitted! Thank you for contacting us.");
+		return true; // Allow form submission
+	}
+</script>
+		<footer>
+			<div class="footer">
+				<table id="table">
+					<tr>
+						<th>Follow me</th>
+						<th>Contact info</th>
+						<th>Supported by</th>
+						<th>&copy; Copyright 2019, All Rights Reserved</th>
+					</tr>
+					<tr>
+						
+						<td>Email: sagar.bastola.a19@icp.edu.np</td>
+						<td>Sagar Bastola</td>
+					</tr>
+				</table>
+			</div>
+		</footer>
+		<script >
+		
+	</body>
+</html>
